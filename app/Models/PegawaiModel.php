@@ -16,7 +16,7 @@ class PegawaiModel extends Model
 
     public function getPegawaiWithJabatan() {
         return $this->select('pegawai.*, jabatan.nama_jabatan, jabatan.deskripsi_jabatan')
-        ->join('jabatan','jabatan.id','=','pegawai.jabatan_id')->findAll();
+        ->join('jabatan','jabatan.id = pegawai.jabatan_id')->findAll();
     }
 
     // protected bool $allowEmptyInserts = false;
